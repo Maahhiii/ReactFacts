@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  background-color: #0d1117;
+  color: #e6edf3;
+  line-height: 1.6;
+  overflow: hidden;
+  position: relative;
+}
+
+@keyframes rotateLogo {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container {
+  max-width: 900px;
+  padding: 40px 20px;
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: -100px;
+  right: -210px;
+  width: 550px;
+  height: 550px;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg') no-repeat center;
+  background-size: contain;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 0;
+  animation: rotateLogo 60s linear infinite;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  bottom: -100px;
+  left: -210px;
+  width: 550px;
+  height: 550px;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg') no-repeat center;
+  background-size: contain;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 0;
+  animation: rotateLogo 50s linear infinite;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #30363d;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #61dafb;
+}
+
+.main-content {
+  padding: 40px 0;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #58a6ff;
+}
+
+.reasons {
+  list-style: square inside;
+  padding-left: 0;
+  font-size: 1.05rem;
+}
+
+footer {
+  border-top: 1px solid #30363d;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #8b949e;
+}
+
+.reasons li {
+  width: 800px;
+  margin: 8px auto;
+  padding: 8px 12px;
+  background: rgba(97, 218, 251, 0.1);
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.reasons li:hover {
+  width: 820px;
+  background: rgba(97, 218, 251, 0.2);
+}
